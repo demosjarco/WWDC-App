@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Tech Genius. All rights reserved.
 //
 
+#import "HomeCell.h"
+
 @interface Home : UICollectionViewController
+
+@property (strong, nonatomic) NSMutableArray *content;
 
 @end
