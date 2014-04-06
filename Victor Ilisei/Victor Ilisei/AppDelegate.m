@@ -14,7 +14,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    self.homeController = [[Home alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    self.homeController = [[HomeViewController alloc] init];
     
     self.window.rootViewController = self.homeController;
     [self.window makeKeyAndVisible];

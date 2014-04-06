@@ -19,8 +19,7 @@
 		17ADAABF18EFAF5000A31A2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ADAAA718EFAF5000A31A2A /* UIKit.framework */; };
 		17ADAAC718EFAF5000A31A2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17ADAAC518EFAF5000A31A2A /* InfoPlist.strings */; };
 		17ADAAC918EFAF5000A31A2A /* Victor_IliseiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ADAAC818EFAF5000A31A2A /* Victor_IliseiTests.m */; };
-		17ADAAD418EFB43700A31A2A /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ADAAD318EFB43700A31A2A /* Home.m */; };
-		17ADAAD718EFB6F700A31A2A /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ADAAD618EFB6F700A31A2A /* HomeCell.m */; };
+		17AE346818F101FC000BC02F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE346718F101FC000BC02F /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +49,8 @@
 		17ADAAC418EFAF5000A31A2A /* Victor IliseiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Victor IliseiTests-Info.plist"; sourceTree = "<group>"; };
 		17ADAAC618EFAF5000A31A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17ADAAC818EFAF5000A31A2A /* Victor_IliseiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Victor_IliseiTests.m; sourceTree = "<group>"; };
-		17ADAAD218EFB43700A31A2A /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
-		17ADAAD318EFB43700A31A2A /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
-		17ADAAD518EFB6F700A31A2A /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		17ADAAD618EFB6F700A31A2A /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		17AE346618F101FC000BC02F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		17AE346718F101FC000BC02F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +113,8 @@
 				17ADAAB218EFAF5000A31A2A /* AppDelegate.h */,
 				17ADAAB318EFAF5000A31A2A /* AppDelegate.m */,
 				17ADAAB518EFAF5000A31A2A /* Images.xcassets */,
-				17ADAAD218EFB43700A31A2A /* Home.h */,
-				17ADAAD318EFB43700A31A2A /* Home.m */,
-				17ADAAD518EFB6F700A31A2A /* HomeCell.h */,
-				17ADAAD618EFB6F700A31A2A /* HomeCell.m */,
+				17AE346618F101FC000BC02F /* HomeViewController.h */,
+				17AE346718F101FC000BC02F /* HomeViewController.m */,
 				17ADAAAA18EFAF5000A31A2A /* Supporting Files */,
 			);
 			path = "Victor Ilisei";
@@ -254,8 +249,7 @@
 			files = (
 				17ADAAB418EFAF5000A31A2A /* AppDelegate.m in Sources */,
 				17ADAAB018EFAF5000A31A2A /* main.m in Sources */,
-				17ADAAD718EFB6F700A31A2A /* HomeCell.m in Sources */,
-				17ADAAD418EFB43700A31A2A /* Home.m in Sources */,
+				17AE346818F101FC000BC02F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
