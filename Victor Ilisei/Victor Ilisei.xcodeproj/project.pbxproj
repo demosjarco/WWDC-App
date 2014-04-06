@@ -19,7 +19,9 @@
 		17ADAABF18EFAF5000A31A2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ADAAA718EFAF5000A31A2A /* UIKit.framework */; };
 		17ADAAC718EFAF5000A31A2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17ADAAC518EFAF5000A31A2A /* InfoPlist.strings */; };
 		17ADAAC918EFAF5000A31A2A /* Victor_IliseiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ADAAC818EFAF5000A31A2A /* Victor_IliseiTests.m */; };
-		17AE346818F101FC000BC02F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE346718F101FC000BC02F /* HomeViewController.m */; };
+		17C428ED18F1E0DD007BDDD6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C428EC18F1E0DD007BDDD6 /* MainViewController.m */; };
+		17C428F018F1E28F007BDDD6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C428EF18F1E28F007BDDD6 /* HomeViewController.m */; };
+		17C428F218F1E4BE007BDDD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C428F118F1E4BE007BDDD6 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,11 @@
 		17ADAAC418EFAF5000A31A2A /* Victor IliseiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Victor IliseiTests-Info.plist"; sourceTree = "<group>"; };
 		17ADAAC618EFAF5000A31A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17ADAAC818EFAF5000A31A2A /* Victor_IliseiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Victor_IliseiTests.m; sourceTree = "<group>"; };
-		17AE346618F101FC000BC02F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		17AE346718F101FC000BC02F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		17C428EB18F1E0DD007BDDD6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		17C428EC18F1E0DD007BDDD6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		17C428EE18F1E28F007BDDD6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		17C428EF18F1E28F007BDDD6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		17C428F118F1E4BE007BDDD6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C428F218F1E4BE007BDDD6 /* QuartzCore.framework in Frameworks */,
 				17ADAAA618EFAF5000A31A2A /* CoreGraphics.framework in Frameworks */,
 				17ADAAA818EFAF5000A31A2A /* UIKit.framework in Frameworks */,
 				17ADAAA418EFAF5000A31A2A /* Foundation.framework in Frameworks */,
@@ -99,6 +105,7 @@
 		17ADAAA218EFAF5000A31A2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17C428F118F1E4BE007BDDD6 /* QuartzCore.framework */,
 				17ADAAA318EFAF5000A31A2A /* Foundation.framework */,
 				17ADAAA518EFAF5000A31A2A /* CoreGraphics.framework */,
 				17ADAAA718EFAF5000A31A2A /* UIKit.framework */,
@@ -113,8 +120,10 @@
 				17ADAAB218EFAF5000A31A2A /* AppDelegate.h */,
 				17ADAAB318EFAF5000A31A2A /* AppDelegate.m */,
 				17ADAAB518EFAF5000A31A2A /* Images.xcassets */,
-				17AE346618F101FC000BC02F /* HomeViewController.h */,
-				17AE346718F101FC000BC02F /* HomeViewController.m */,
+				17C428EB18F1E0DD007BDDD6 /* MainViewController.h */,
+				17C428EC18F1E0DD007BDDD6 /* MainViewController.m */,
+				17C428EE18F1E28F007BDDD6 /* HomeViewController.h */,
+				17C428EF18F1E28F007BDDD6 /* HomeViewController.m */,
 				17ADAAAA18EFAF5000A31A2A /* Supporting Files */,
 			);
 			path = "Victor Ilisei";
@@ -249,7 +258,8 @@
 			files = (
 				17ADAAB418EFAF5000A31A2A /* AppDelegate.m in Sources */,
 				17ADAAB018EFAF5000A31A2A /* main.m in Sources */,
-				17AE346818F101FC000BC02F /* HomeViewController.m in Sources */,
+				17C428ED18F1E0DD007BDDD6 /* MainViewController.m in Sources */,
+				17C428F018F1E28F007BDDD6 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
