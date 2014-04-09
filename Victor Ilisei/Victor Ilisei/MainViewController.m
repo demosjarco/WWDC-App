@@ -66,22 +66,46 @@
     @autoreleasepool {
         // Draw Gradient
         CAGradientLayer *gradient = [CAGradientLayer layer];
-        gradient.frame = self.view.frame;
+        gradient.frame = self.view.bounds;
         gradient.locations = @[@0, @0.5, @1.0];
         gradient.colors = @[(id)[self updateStatusBarForLighterColorWith:baseColor].CGColor, (id)baseColor.CGColor, (id)[self darkerColorFor:baseColor].CGColor];
         // Animate gradient
-        CABasicAnimation *flash = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        flash.fromValue = [NSNumber numberWithFloat:0.0];
-        flash.toValue = [NSNumber numberWithFloat:1.0];
-        flash.duration = 1.0;
-        flash.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-        
-        [gradient addAnimation:flash forKey:@"flashAnimation"];
+        if (animated) {
+            CABasicAnimation *flash = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            flash.fromValue = [NSNumber numberWithFloat:0.0];
+            flash.toValue = [NSNumber numberWithFloat:1.0];
+            flash.duration = 1.0;
+            flash.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            
+            [gradient addAnimation:flash forKey:@"gradientOn"];
+        }
         
         return gradient;
         // Update Status Bar
         [self setNeedsStatusBarAppearanceUpdate];
     }
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    CAGradientLayer *gradient = (CAGradientLayer *)[self.view.layer.sublayers lastObject];
+    CABasicAnimation *flash = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    flash.delegate = self;
+    flash.fromValue = [NSNumber numberWithFloat:1.0];
+    flash.toValue = [NSNumber numberWithFloat:0.0];
+    flash.duration = duration/2;
+    flash.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
+    [gradient addAnimation:flash forKey:@"gradientOff"];
+    [gradient removeFromSuperlayer];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    CAGradientLayer *gradient = (CAGradientLayer *)[self.view.layer.sublayers lastObject];
+    [gradient removeFromSuperlayer];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self.view.layer addSublayer:[self drawBackgroundGradient:YES with:self.backgroundColor]];
 }
 
 @end
